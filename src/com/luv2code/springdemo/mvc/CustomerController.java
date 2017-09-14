@@ -1,8 +1,6 @@
 package com.luv2code.springdemo.mvc;
 
 import javax.validation.Valid;
-import javax.xml.bind.Binder;
-
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +43,10 @@ public class CustomerController {
 			BindingResult theBindingResult) {
 		
 		System.out.println("Last name: |" + theCustomer.getLastName() + "|");
+		
+		System.out.println("Binding result: " + theBindingResult);
+		
+		System.out.println("\n\n\n\n");
 		
 		//If the validation fails, send them to the form
 		if(theBindingResult.hasErrors()) {
